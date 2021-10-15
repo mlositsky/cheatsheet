@@ -32,10 +32,16 @@ JOIN v_catalog.users u
 ORDER BY schema_name;
 ```
 
+## Import(copy) csv data
+
+``` SQL
+COPY table_name FROM '/path/to/data.csv' PARSER fcsvparser();
+```
+
 ## Get projections
 
 ``` SQL
-GET_PROJECTIONS ( '[[database.]schema-name.]table' )
+SELECT GET_PROJECTIONS ( '[[database.]schema-name.]table' )
 ```
 
 ## Table used size
