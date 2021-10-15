@@ -3,7 +3,7 @@
 ## Create schema and table
 
 ``` SQL
-CREATE schema my_schema;
+CREATE SCHEMA my_schema;
 
 CREATE TABLE my_schema.performance_metrics (
         date DATE,
@@ -42,7 +42,7 @@ GET_PROJECTIONS ( '[[database.]schema-name.]table' )
 
 ``` SQL
 SELECT anchor_table_schema, anchor_table_name,
-ROUND( SUM(used_bytes) / (1024^3), 2 ) AS used_gb
+ROUND( SUM(used_bytes) / (1024^1), 2 ) AS used_kb
 FROM v_monitor.projection_storage
 GROUP BY anchor_table_schema, anchor_table_name
 ORDER BY SUM (used_bytes) DESC;
