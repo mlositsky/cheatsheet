@@ -1,5 +1,23 @@
 # Vertica Cheatsheet
 
+## Create schema and table
+
+``` SQL
+CREATE schema my_schema;
+
+CREATE TABLE my_schema.performance_metrics (
+        date DATE,
+        channel VARCHAR,
+        country VARCHAR,
+        os VARCHAR,
+        impressions INTEGER,
+        clicks INTEGER,
+        installs INTEGER,
+        spend NUMERIC(12, 2),
+        revenue NUMERIC(12, 2)
+);
+```
+
 ## List schemas
 
 ``` SQL
