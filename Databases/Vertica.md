@@ -19,3 +19,13 @@ ORDER BY schema_name;
 ``` SQL
 GET_PROJECTIONS ( '[[database.]schema-name.]table' )
 ```
+
+## Table used size
+
+``` SQL
+SELECT anchor_table_schema, anchor_table_name,
+ROUND( SUM(used_bytes) / (1024^3), 2 ) AS used_gb
+FROM v_monitor.projection_storage
+GROUP BY anchor_table_schema, anchor_table_name
+ORDER BY SUM (used_bytes) DESC;
+```
