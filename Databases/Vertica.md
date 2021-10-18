@@ -15,6 +15,7 @@ CREATE TABLE my_schema.performance_metrics (
         installs INTEGER,
         spend NUMERIC(12, 2),
         revenue NUMERIC(12, 2)
+        CONSTRAINT pk PRIMARY KEY (date, channel, country, os) ENABLED
 );
 ```
 
