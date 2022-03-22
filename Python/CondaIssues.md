@@ -1,6 +1,6 @@
 # Conda issues
 
-Usually these issues happen after running `conda init` command
+Usually these issues happen after running `conda init` command.
 
 ## Issue
 
@@ -15,15 +15,15 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor
 HKEY_CURRENT_USER\Software\Microsoft\Command Processor
 ```
 
-for Autorun entries
+for Autorun entries.
 
 ## Issue
 
 powershell.exe starts with error `...Documents\WindowsPowerShell\profile.ps1 cannot be loaded because running scripts is disabled on
-this system.`
+this system.`.
 
 ## Fix
 
 in powershell enter:
 
-```Set-ExecutionPolicy RemoteSigned -Scope CurrentUser```
+```Set-ExecutionPolicy RemoteSigned -Scope CurrentUser```.
